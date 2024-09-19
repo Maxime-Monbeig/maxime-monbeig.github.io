@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <xsl:output method="html" indent="yes"/>
@@ -12,7 +13,7 @@
       </head>
       <body>
         <h1>FOAF Profile</h1>
-        <xsl:apply-templates select="//foaf:Person"/>
+        <xsl:apply-templates select="//foaf:Person[not(parent::foaf:knows)]"/>
       </body>
     </html>
   </xsl:template>
@@ -20,9 +21,16 @@
   <!-- Template for foaf:Person elements -->
   <xsl:template match="foaf:Person">
     <div>
-      <h2><xsl:value-of select="foaf:name"/></h2>
-      <p><strong>Homepage:</strong> <a href="{foaf:homepage/@rdf:resource}">Ma page</a></p>
-      <p><strong>Knows:</strong></p>
+      <h2>
+        <xsl:value-of select="foaf:name"/>
+      </h2>
+      <p>
+        <strong>Homepage:</strong>
+        <a href="{foaf:homepage/@rdf:resource}">Ma page</a>
+      </p>
+      <p>
+        <strong>Knows:</strong>
+      </p>
       <ul>
         <xsl:for-each select="foaf:knows/foaf:Person">
         </xsl:for-each>
@@ -37,7 +45,7 @@
       <ul>
         <xsl:for-each select="foaf:Person">
           <li>
-            <a href="{foaf:homepage/@rdf:resource}">
+            <a href="{foaf:homepage/@rdf:resource}" target="_blank">
               <xsl:value-of select="foaf:name"/>
             </a>
           </li>
