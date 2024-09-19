@@ -13,7 +13,7 @@
       </head>
       <body>
         <h1>FOAF Profile</h1>
-        <xsl:apply-templates select="//foaf:Person[not(parent::foaf:knows)]"/>
+        <xsl:apply-templates select="//foaf:Person[@rdf:about='#me']"/>
       </body>
     </html>
   </xsl:template>
