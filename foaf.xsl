@@ -25,7 +25,7 @@
             <strong>Knows:</strong>
           </p>
           <ul>
-            <xsl:for-each select="foaf:knows/foaf:Person">
+            <xsl:for-each select="//foaf:knows/foaf:Person">
               <li>
                 <a href="{foaf:homepage/@rdf:resource}" target="_blank">
                   <xsl:value-of select="foaf:name"/>
