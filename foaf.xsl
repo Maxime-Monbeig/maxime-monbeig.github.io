@@ -13,7 +13,7 @@
       </head>
       <body>
         <h1>FOAF Profile</h1>
-        <xsl:apply-templates select="//foaf:Person[@rdf:about='#me']"/>
+        <xsl:apply-templates select="//foaf:Person[@rdf:ID='maxime_monbeig']"/>
       </body>
     </html>
   </xsl:template>
