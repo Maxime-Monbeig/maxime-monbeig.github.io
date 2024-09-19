@@ -8,14 +8,14 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>FOAF Profile</title>
+        <title><xsl:value-of select="//foaf:title"/></title>
       </head>
       <body>
         <h1>FOAF Profile</h1>
 
         <div>
           <h2>
-            <xsl:value-of select="foaf:name"/>
+            <xsl:value-of select="//foaf:name"/>
           </h2>
           <p>
             <strong>Homepage:</strong>
