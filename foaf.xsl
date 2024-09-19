@@ -21,11 +21,26 @@
   <xsl:template match="foaf:Person">
     <div>
       <h2><xsl:value-of select="foaf:name"/></h2>
-      <p><strong>Homepage:</strong> <a href="{foaf:homepage}">Ma page</a></p>
+      <p><strong>Homepage:</strong> <a href="{foaf:homepage/@rdf:resource}">Ma page</a></p>
       <p><strong>Knows:</strong></p>
       <ul>
         <xsl:for-each select="foaf:knows/foaf:Person">
-          <li><a href="{foaf:homepage/@rdf:resource}"><xsl:value-of select="foaf:name"/></a></li>
+        </xsl:for-each>
+      </ul>
+    </div>
+  </xsl:template>
+
+  <!-- Template for foaf:knows elements -->
+  <xsl:template match="foaf:knows/foaf:Person">
+    <div>
+      <h3>Knows</h3>
+      <ul>
+        <xsl:for-each select="foaf:Person">
+          <li>
+            <a href="{foaf:homepage/@rdf:resource}">
+              <xsl:value-of select="foaf:name"/>
+            </a>
+          </li>
         </xsl:for-each>
       </ul>
     </div>
