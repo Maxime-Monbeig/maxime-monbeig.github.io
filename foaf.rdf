@@ -13,7 +13,16 @@
     <foaf:homepage rdf:resource="http://www.example.com"/>
     <foaf:knows>
       <foaf:Person>
-        <foaf:name>Francis Bala</foaf:name>
+        <foaf:name>Antoine Sueur</foaf:name>
+        <foaf:homepage rdf:resource="http://antoinesueurdev.github.io"/>
+      </foaf:Person>
+      <foaf:Person>
+        <foaf:name>Lucille Rey</foaf:name>
+        <foaf:homepage rdf:resource="http://lucillerey.github.io"/>
+      </foaf:Person>
+      <foaf:Person>
+        <foaf:name>Aïnhoa</foaf:name>
+        <foaf:homepage rdf:resource="http://ainhoalntr.github.io"/>
       </foaf:Person>
     </foaf:knows>
   </foaf:Person>

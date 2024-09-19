@@ -21,11 +21,11 @@
   <xsl:template match="foaf:Person">
     <div>
       <h2><xsl:value-of select="foaf:name"/></h2>
-      <p><strong>Homepage:</strong> <a href="{foaf:homepage}"><xsl:value-of select="foaf:homepage"/></a></p>
+      <p><strong>Homepage:</strong> <a href="{foaf:homepage}">Ma page</a></p>
       <p><strong>Knows:</strong></p>
       <ul>
         <xsl:for-each select="foaf:knows/foaf:Person">
-          <li><xsl:value-of select="foaf:name"/></li>
+          <li><a href="{foaf:homepage}"><xsl:value-of select="foaf:name"/></a></li>
         </xsl:for-each>
       </ul>
     </div>
