@@ -6,14 +6,14 @@
   <xsl:output method="html" indent="yes"/>
 
   <!-- Template for the root element -->
-  <xsl:template match="/">
+  <xsl:template match="root">
     <html>
       <head>
         <title>FOAF Profile</title>
       </head>
       <body>
         <h1>FOAF Profile</h1>
-        <xsl:apply-templates select="//foaf:Person[@rdf:ID='maxime_monbeig']"/>
+        <xsl:apply-templates select="//foaf:Person"/>
       </body>
     </html>
   </xsl:template>
