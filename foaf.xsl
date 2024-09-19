@@ -39,7 +39,7 @@
   </xsl:template>
 
   <!-- Template for foaf:knows elements -->
-  <xsl:template match="foaf:knows/foaf:Person">
+  <xsl:template match="foaf:Person">
     <div>
       <h3>Knows</h3>
       <ul>
