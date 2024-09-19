@@ -25,7 +25,6 @@
       <p><strong>Knows:</strong></p>
       <ul>
         <xsl:for-each select="foaf:knows/foaf:Person">
-          <li><a href="{foaf:homepage}"><xsl:value-of select="foaf:name"/></a></li>
         </xsl:for-each>
       </ul>
     </div>
