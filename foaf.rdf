@@ -4,7 +4,7 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
-  <foaf:Person rdf:about="#me">
+  <foaf:Person>
     <foaf:name>Maxime Monbeig</foaf:name>
     <foaf:title>Page de Maxime Monbeig</foaf:title>
     <foaf:givenName>Maxime</foaf:givenName>
