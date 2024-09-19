@@ -13,13 +13,13 @@
       </head>
       <body>
         <h1>FOAF Profile</h1>
-        <xsl:apply-templates select="//foaf:Person"/>
+        <xsl:apply-templates select="//foaf:Person[@rdf:ID='maxime_monbeig']"/>
       </body>
     </html>
   </xsl:template>
 
   <!-- Template for foaf:Person elements -->
-  <xsl:template match="foaf:Person">
+  <xsl:template match="foaf:Person[@rdf:ID='maxime_monbeig']">
     <div>
       <h2>
         <xsl:value-of select="foaf:name"/>
