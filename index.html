@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Jean Dupont</title>
 
-    <!-- Lien vers le fichier FOAF -->
-    <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Maxime Monbeig</title>
+
+  <!-- Lien vers le fichier FOAF -->
+  <?xml-stylesheet type="text/xsl" href="foaf.xsl"?>
 
 </head>
+
 <body>
+  <h1>FOAF Profile</h1>
+  <!-- Lien vers le fichier RDF pour le charger directement -->
+  <object data="foaf.rdf" type="application/rdf+xml">
+    Votre navigateur ne supporte pas l'affichage de fichiers RDF.
+  </object>
 </body>
+
 </html>
